@@ -1,0 +1,8 @@
+-cp ../haxe-continuation
+-cp ../monax/src/
+-cp test
+
+-main Main
+--php-front index.php
+--remap neko:php
+-php php
