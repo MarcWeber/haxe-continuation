@@ -1,0 +1,12 @@
+{
+  "name": "haxe-continuation",
+  "url" : "https://github.com/MarcWeber/haxe-continuation/",
+  "license": "MIT",
+  "tags": ["cross"],
+  "description": "For JS target: Types for continuation - encode exceptions in the future's result",
+  "version": "0.0.0",
+  "releasenote": "Initial release, everything is working correctly",
+  "contributors": ["Marc Weber"],
+  "dependencies": {
+  }
+}
