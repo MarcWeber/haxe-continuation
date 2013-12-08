@@ -1,5 +1,5 @@
 #!/bin/sh
-p=$(sed -n 's/"name"[ ]*:[ ]*"\([^"]*\)".*/\1/p ' haxelib.json)
+p=$(sed -n 's/^[ ]*"name"[ ]*:[ ]*"\([^"]*\)".*/\1/p ' haxelib.json)
 
 mkdir -p release/$p
 git archive --format=zip HEAD > $p.zip

@@ -2,6 +2,7 @@
 -cp ../haxe-continuation
 -cp ../monax/src/
 -cp test
+-cp src
 
 -main Main
 -js js-haxe.js
