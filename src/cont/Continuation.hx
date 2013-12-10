@@ -1,9 +1,13 @@
-package mw;
+package cont;
 
 import haxe.macro.Expr;
 import haxe.macro.Context;
 
 import com.mindrocks.monads.Monad;
+
+// dummy type to encode errors for tasks which don't return anything, such as
+// "INSERT INTO .."
+typedef CVoid = Dynamic;
 
 // a value wrapped in a callable function so that an exception can be thrown
 // instead
