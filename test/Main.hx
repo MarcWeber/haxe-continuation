@@ -1,14 +1,15 @@
-import cont.Continuation;
+import cont.Cont;
+import cont.ContinuationM;
 
 class Main {
 
-  static public function mock_read_file_ok(filename:String): cont.Continuation.Cont<String>  {
+  static public function mock_read_file_ok(filename:String): Cont<String>  {
     return function(cont){
       cont(function () return filename );
     }
   }
 
-  static public function mock_read_file_failure(filename:String): cont.Continuation.Cont<String> {
+  static public function mock_read_file_failure(filename:String): Cont<String> {
     return function(cont){
       cont(function (){ throw "file not found"; return ""; });
     }

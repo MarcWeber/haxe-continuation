@@ -1,39 +1,8 @@
 package cont;
-
 import haxe.macro.Expr;
 import haxe.macro.Context;
 
 import com.mindrocks.monads.Monad;
-
-// dummy type to encode errors for tasks which don't return anything, such as
-// "INSERT INTO .."
-typedef CVoid = Dynamic;
-
-// a value wrapped in a callable function so that an exception can be thrown
-// instead
-typedef LazyVal<X> = Void -> X;
-
-// a continuation function taking a LazyVal as first argument
-typedef ContP<X> = (LazyVal<X>) -> Void;
-
-// a function taking a continuation function as parameter
-typedef Cont<X> = ContP<X> -> Void;
-
-
-class Continuation {
-
-  // catch Exceptions and pass them to continuation functions
-  macro static public function catchCont(cont:Expr, block:Expr):Expr {
-    return macro {
-      try{
-        var r = $block;
-        $cont(function(){ return r; });
-      }catch(e:Dynamic){
-        $cont(function(){ throw e; return null; });
-      }
-    }
-  }
-}
 
 /* usage
 
