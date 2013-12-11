@@ -1,5 +1,5 @@
-import cont.Cont;
-import cont.ContinuationM;
+import cross.Cont;
+import cross.ContinuationM;
 
 class Main {
 

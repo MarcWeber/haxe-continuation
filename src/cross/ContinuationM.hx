@@ -1,4 +1,4 @@
-package cont;
+package cross;
 import haxe.macro.Expr;
 import haxe.macro.Context;
 
